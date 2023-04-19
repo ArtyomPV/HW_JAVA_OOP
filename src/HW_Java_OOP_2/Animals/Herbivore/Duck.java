@@ -7,7 +7,6 @@ public class Duck extends Herbivore implements Flyable, GroundMoveable {
     public Duck(String name) {
         super(name);
     }
-
     int speedWalk = 3;
     int speedRun = 0;
     int speedFly = 50;

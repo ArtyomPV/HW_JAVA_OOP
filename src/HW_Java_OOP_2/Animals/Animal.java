@@ -6,7 +6,6 @@ public abstract class Animal implements Sayable {
 
     private String name;
 
-
     public abstract String feed();
 
     public Animal(String name) {

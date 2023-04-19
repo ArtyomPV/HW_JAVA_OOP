@@ -17,7 +17,6 @@ public class Hare extends Herbivore implements GroundMoveable {
         public String say(){
         return "Frrrr";
 }
-
         @Override
         public int walkSpeed() {
                 return this.speedWalk;

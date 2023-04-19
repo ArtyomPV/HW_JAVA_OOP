@@ -4,7 +4,6 @@ import HW_Java_OOP_2.Interfaces.Sayable;
 
 public class Radio implements Sayable {
     private String name;
-
     public Radio(String name) {
         this.name = name;
     }

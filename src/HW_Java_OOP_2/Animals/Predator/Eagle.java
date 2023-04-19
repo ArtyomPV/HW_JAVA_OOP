@@ -3,8 +3,6 @@ package HW_Java_OOP_2.Animals.Predator;
 import HW_Java_OOP_2.Interfaces.Flyable;
 
 public class Eagle extends Predator implements Flyable {
-
-
     int speedFly = 70;
 
     public Eagle(String name) {

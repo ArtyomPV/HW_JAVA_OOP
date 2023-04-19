@@ -9,7 +9,6 @@ import HW_Java_OOP_2.Interfaces.Flyable;
 import HW_Java_OOP_2.Interfaces.GroundMoveable;
 import HW_Java_OOP_2.Interfaces.Sayable;
 import HW_Java_OOP_2.Zoo.Zoo;
-
 public class MainApp {
     public static void main(String[] args) {
         Zoo zoo = new Zoo();
@@ -19,7 +18,6 @@ public class MainApp {
         for(Object o: zoo.getAnimals()){
             System.out.println(o);
         }
-
 
         for(Animal animal: zoo.getAnimals()){
             System.out.println(animal.getName() + '-' + animal.say());
