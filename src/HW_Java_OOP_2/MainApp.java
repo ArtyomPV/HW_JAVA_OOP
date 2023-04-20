@@ -4,10 +4,13 @@ import HW_Java_OOP_2.Animals.Animal;
 import HW_Java_OOP_2.Animals.Herbivore.Duck;
 import HW_Java_OOP_2.Animals.Herbivore.Hare;
 import HW_Java_OOP_2.Animals.Predator.Eagle;
+import HW_Java_OOP_2.Animals.Predator.Shark;
+import HW_Java_OOP_2.Animals.Predator.Whale;
 import HW_Java_OOP_2.Animals.Predator.Wolf;
 import HW_Java_OOP_2.Interfaces.Flyable;
 import HW_Java_OOP_2.Interfaces.GroundMoveable;
 import HW_Java_OOP_2.Interfaces.Sayable;
+import HW_Java_OOP_2.Interfaces.Swimable;
 import HW_Java_OOP_2.Zoo.Zoo;
 public class MainApp {
     public static void main(String[] args) {
@@ -46,12 +49,16 @@ public class MainApp {
         System.out.println("Победитель по перелетам:");
         System.out.printf("\t%s speed %s\n", zoo.flyWinner(), zoo.flyWinner().flySpeed());
 
+        zoo.addAnimal(new Shark("Bruce"))
+                .addAnimal(new Whale("Tulkun"));
 
+        System.out.println("Животные которые могут плавать:");
+        for(Swimable animal: zoo.swimable()) {
+            System.out.printf("\t%s скорость: %d\n", animal.toString(), animal.swimSpeed());
+        }
+        System.out.println("Победитель по плаванью:");
+        System.out.printf("\t%s speed %s\n", zoo.swimWinner(), zoo.swimWinner().swimSpeed());
     }
-
-
-
-
 }
 /*
 Реализовать абстрактный класс Animal и его наследники Cat, Dog, и прочее.

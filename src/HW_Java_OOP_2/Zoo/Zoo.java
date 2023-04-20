@@ -4,6 +4,7 @@ import HW_Java_OOP_2.Animals.Animal;
 import HW_Java_OOP_2.Interfaces.Flyable;
 import HW_Java_OOP_2.Interfaces.GroundMoveable;
 import HW_Java_OOP_2.Interfaces.Sayable;
+import HW_Java_OOP_2.Interfaces.Swimable;
 import HW_Java_OOP_2.Radio;
 import java.util.ArrayList;
 import java.util.List;
@@ -71,5 +72,25 @@ public class Zoo {
             }
         }
         return flyables().get(indexWinner);
+    }
+
+    public List<Swimable> swimable(){
+        List<Swimable> swimableAnimals = new ArrayList<>();
+        for(Animal animal:animals){
+            if(animal instanceof Swimable){
+                swimableAnimals.add((Swimable) animal);
+            }
+        }
+        return swimableAnimals;
+    }
+
+    public Swimable swimWinner(){
+        int indexWinner = 0;
+        for (int i = 0; i < swimable().size(); i++) {
+            if(swimable().get(indexWinner).swimSpeed() < swimable().get(i).swimSpeed()){
+                indexWinner = i;
+            }
+        }
+        return swimable().get(indexWinner);
     }
 }
